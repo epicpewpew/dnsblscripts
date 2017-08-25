@@ -5,7 +5,6 @@ bl.mailspike.net
 bl.spameatingmonkey.net
 b.barracudacentral.org
 bl.deadbeef.com
-bl.emailbasura.org
 bl.spamcannibal.org
 bl.spamcop.net
 blackholes.five-ten-sg.com
