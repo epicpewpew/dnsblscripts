@@ -96,20 +96,6 @@ if [ "x${reverse}" = "x" ] ; then
       exit 1
 fi
 
-# Assuming an IP address of 11.22.33.44 as parameter or argument
-
-# If the IP address in $0 passes our crude regular expression check,
-# the variable  ${reverse} will contain 44.33.22.11
-# In this case the test will be:
-#   [ "x44.33.22.11" = "x" ]
-# This test will fail and the program will continue
-
-# An empty '${reverse}' means that shell argument $1 doesn't pass our simple IP address check
-# In that case the test will be:
-#   [ "x" = "x" ]
-# This evaluates to true, so the script will call the ERROR function and quit
-
-# -- do a reverse ( address -> name) DNS lookup
 REVERSE_DNS=$(dig +short -x $IP)
 
 echo IP $IP NAME ${REVERSE_DNS:----}
