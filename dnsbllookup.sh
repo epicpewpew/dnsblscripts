@@ -108,6 +108,7 @@ for BL in ${BLISTS} ; do
     # use dig to lookup the name in the blacklist
     #echo "$(dig +short -t a ${reverse}.${BL}. |  tr '\n' ' ')"
     LISTED="$(dig +short -t a ${reverse}.${BL}.)"
+    [[ ! -z $LISTED ]] && LISTED="LISTED"
     echo ${LISTED:----}
 done
 
